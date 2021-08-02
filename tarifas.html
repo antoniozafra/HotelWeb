@@ -1,0 +1,115 @@
+<!--Autor: Antonio Jesús Zafra Arias -->
+<!--Diseño web Hotel -->
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Eurostars Hotel Códoba - Tarifas</title>
+	<link rel="stylesheet" href="estilos/estilos.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	<script type="text/javascript" src="funciones/funciones.js"></script>
+</head>
+
+<body>
+
+
+	<div id="contenedor_principal">
+		<!--MENU DE NAVEGACION -->
+
+		<div id="menu" class="animated zoomInUp delay-0s">
+			<div id="logo_menu">
+				<img class="animated rotateInDownLeft delay-1s" id="logo_menu" src="imagenes/logo.png">
+				<div id="texto_menu">
+					<a href="index.html" class="animated  rotateInDownLeft delay-1s">Inicio |</a>
+					<a href="tarifas.html" class="animated  rotateInDownLeft delay-1s">Tarifas |</a>
+					<a href="contacto.html" class="animated  rotateInDownLeft delay-1s">Contacto |</a>
+					<a href="servicios.html" class="animated  rotateInDownLeft delay-1s">Servicios</a>
+				</div>
+			</div>
+
+			<div id="inicio_sesion" class="animated  rotateInDownLeft delay-1s">
+				<form>
+					<p id="usuario">Usuario</p>
+					<input type="email" id="usuario_input" required>
+					<p id="usuario">Contraseña</p>
+					<input type="password" id="usuario_input" required>
+					<input type="submit" id="inicio_sesion_boton" value="Iniciar ">
+				</form>
+			</div>
+
+
+
+		</div>
+
+		<!--FORMULARIO -->
+		<div id="formulario_tarifas" class="animated fadeIn delay-1s">
+			<form name="formulario" id="formulario">
+				<legend>HOTEL EUROSTARS PALACE *****</legend>
+
+				<!--FECHA DE ENTRADA -->
+				<label for="fecha_entrada">Fecha de Entrada:</label>
+				<input onclick="cambiar_fecha()" type="date" name="fecha_entrada" id="fecha_entrada" required>
+
+				<!-- FECHA SALIDA-->
+				<label for="fecha_salida">Fecha de Salida:</label>
+				<input onclick="cambiar_fecha()" type="date" name="fecha_salida" id="fecha_salida" required>
+
+				<!--NUMERO DE HABITACIONES -->
+				<label for="numero_habitaciones">Nº Habitaciones:</label>
+				<input onchange="reservar();" id="numero_habitaciones" type="number" min="1" value="1" required max="10">
+
+				<!--NUMERO DE ADULTOS -->
+				<label for="numero_adultos">Nº Adultos</label>
+				<input onchange="reservar();" id="numero_adultos" type="number" min="1" max="4" value="1" required>
+
+				<!--NUMERO DE NIÑOS -->
+				<label for="numero_ninos">Nº Niños</label>
+				<input onchange="reservar();" id="numero_ninos" type="number" min="0" max="10" value="0" required onclick="vercunas() ">
+
+				<!--NUMERO DE CUNAS -->
+				<label for="numero_cunas" id="numero_cunas_texto" style="display: none">Nº Cunas</label>
+				<input onchange="reservar();" type="number" id="numero_cunas" max="10" min=0 style="display: none" required>
+
+				<!--PRECIO FINAL -->
+
+
+				<div id="boton_inicio2">
+					<p id="datos">Rellene los campos</p>
+
+				</div>
+
+
+			</form>
+
+		</div>
+
+		<div>
+
+
+
+			<br>
+			<br>
+		</div>
+
+
+
+
+
+
+
+	</div>
+	<footer>
+		<div id="footer" class="animated zoomInDown delay-0s">
+			<h1 id="footer_texto">Designed by Antonio Zafra &copy;</h1>
+		</div>
+
+
+	</footer>
+
+
+
+</body>
+
+</html>

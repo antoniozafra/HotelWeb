@@ -1,0 +1,181 @@
+<!--Autor: Antonio Jesús Zafra Arias -->
+<!--Diseño web Hotel -->
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Eurostars Hotel Códoba - Inicio</title>
+	<link rel="stylesheet" href="estilos/estilos.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<style>
+		.mySlides {
+			display: none
+		}
+
+		.w3-left,
+		.w3-right,
+		.w3-badge {
+			cursor: pointer
+		}
+
+		.w3-badge {
+			height: 13px;
+			width: 13px;
+			padding: 0
+		}
+
+	</style>
+	<script type="text/javascript" src="funciones/funciones.js"></script>
+</head>
+
+<body>
+
+	<script>
+		var slideIndex = 1;
+		showDivs(slideIndex);
+
+		function plusDivs(n) {
+			showDivs(slideIndex += n);
+		}
+
+		function currentDiv(n) {
+			showDivs(slideIndex = n);
+		}
+
+		function showDivs(n) {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("demo");
+			if (n > x.length) {
+				slideIndex = 1
+			}
+			if (n < 1) {
+				slideIndex = x.length
+			}
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";
+			}
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" w3-white", "");
+			}
+			x[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " w3-white";
+		}
+
+	</script>
+	<div id="contenedor_principal">
+		<!--MENU DE NAVEGACION -->
+
+		<div id="menu" class="animated zoomInUp delay-0s">
+			<div id="logo_menu">
+				<img class="animated rotateInDownLeft delay-1s" id="logo_menu" src="imagenes/logo.png">
+				<div id="texto_menu">
+					<a href="index.html" class="animated  rotateInDownLeft delay-1s">Inicio |</a>
+					<a href="tarifas.html" class="animated  rotateInDownLeft delay-1s">Tarifas |</a>
+					<a href="contacto.html" class="animated  rotateInDownLeft delay-1s">Contacto |</a>
+					<a href="servicios.html" class="animated  rotateInDownLeft delay-1s">Servicios</a>
+				</div>
+			</div>
+			
+			<div id="inicio_sesion" class="animated  rotateInDownLeft delay-1s">
+				<form>
+                <p id="usuario">Usuario</p>
+                <input type="email" id="usuario_input" required>
+                <p id="usuario">Contraseña</p>
+                <input type="password" id="usuario_input" required>
+                <input type="submit" id="inicio_sesion_boton" value="Iniciar "> 
+				</form>
+            </div>
+
+
+
+		</div>
+		
+		
+
+		<!--CAROUSEL CON LAS IMAGENES PRINCIPALES DEL HOTRL -->
+		<div>
+			<div class="carousel animated fadeIn delay-1s">
+				<ul class="slides">
+					<input type="radio" name="radio-buttons" id="img-1" checked />
+					<li class="slide-container">
+						<div class="slide-image">
+							<!--PRIMERA IMAGEN-->
+							<img id="imagen_slider" src="imagenes/slider-1.jpg">
+						</div>
+						<div class="carousel-controls">
+							<label for="img-3" class="prev-slide">
+								<span></span>
+							</label>
+							<label for="img-2" class="next-slide">
+								<span></span>
+							</label>
+						</div>
+					</li>
+					<input type="radio" name="radio-buttons" id="img-2" />
+					<li class="slide-container">
+						<div class="slide-image">
+							<!--SEGUNDA IMAGEN -->
+							<img id="imagen_slider" src="imagenes/slider-2.jpg">
+							
+						</div>
+						<div class="carousel-controls">
+							<label for="img-1" class="prev-slide">
+								<span>&lsaquo;</span>
+							</label>
+							<label for="img-3" class="next-slide">
+								<span>&rsaquo;</span>
+							</label>
+						</div>
+					</li>
+					<input type="radio" name="radio-buttons" id="img-3" />
+					<li class="slide-container">
+						<div class="slide-image">
+							<!-- TERCERA IMAGEN-->
+							<img id="imagen_slider" src="imagenes/slider-3.jpg">
+						</div>
+						<div class="carousel-controls">
+							<label for="img-2" class="prev-slide">
+								<span>&lsaquo;</span>
+							</label>
+							<label for="img-1" class="next-slide">
+								<span>&rsaquo;</span>
+							</label>
+						</div>
+					</li>
+					<div class="carousel-dots">
+						<label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+						<label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+						<label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+					</div>
+				</ul>
+				
+			</div>
+			
+			
+			
+			<div class="animated fadeIn delay-1s" id="boton_inicio">
+				<a  id="textto_inicio" href="tarifas.html" >RESERVAR HOTEL</a>
+			</div>
+		</div>
+
+
+
+
+
+
+	</div>
+	<footer>
+		<div id="footer" class="animated zoomInDown delay-0s">
+			<h1 id="footer_texto">Designed by Antonio Zafra &copy;</h1>
+		</div>
+		
+
+	</footer>
+
+
+
+</body>
+
+</html>
